@@ -9,11 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0",
+    "@formkit/i18n": "^1.6.3",
+    "@formkit/pro": "^0.126.3",
+    "@formkit/themes": "^1.6.3",
+    "@formkit/vue": "^1.6.3",
     "bootstrap": "^5.3.3",
-    "sass": "^1.77.2"
+    "pinia": "^2.1.7",
+    "sass": "^1.77.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
