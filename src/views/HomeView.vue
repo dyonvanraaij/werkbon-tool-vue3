@@ -1,6 +1,7 @@
 <script setup>
 import BaseButton from "@/components/BaseButton.vue";
 import BaseInput from "@/components/BaseInput.vue";
+import BaseSelect from "@/components/BaseSelect.vue";
 </script>
 
 <template>
@@ -18,7 +19,10 @@ import BaseInput from "@/components/BaseInput.vue";
       </div>
 
       <div class="col-12">
-        <BaseInput />
+        <BaseInput label="Prijs" name="prijs" placeholder="10.00" />
+      </div>
+      <div class="col-12">
+        <BaseSelect :options="[1,2,3,4]" label="Eenheid" name="eenheid" />
       </div>
     </div>
     </FormKit>
