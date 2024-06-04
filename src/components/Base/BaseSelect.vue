@@ -47,4 +47,11 @@ defineProps({
 .formkit-help {
   color: white !important;
 }
+
+.formkit-dropdown-wrapper {
+  border-color: #DBDBDB !important;
+}
+.formkit-outer {
+  border-color: #DBDBDB !important;
+}
 </style>

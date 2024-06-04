@@ -1,0 +1,99 @@
+label,
+.label {
+  flex-wrap: wrap;
+  font-feature-settings: 'clig' off,
+  'liga' off;
+}
+
+// Input field styling
+.data-complete {
+  border-color: #DBDBDB;
+  box-shadow: 0 0 0 2px #DBDBDB;
+}
+
+.data-complete-after {
+  display: block;
+  padding: 0.5em;
+}
+
+.data-invalid {
+  border-color: red;
+  box-shadow: 0 0 0 2px red;
+}
+
+// Input styling type 'text'
+[data-type='text'][data-invalid] .formkit-inner {
+  @extend .data-invalid;
+}
+
+[data-type='text'][data-complete] .formkit-inner {
+  @extend .data-complete;
+}
+
+[data-type='text'][data-complete] .formkit-inner::after {
+  @extend .data-complete-after;
+}
+
+// Input styling type 'number'
+[data-type='number'][data-invalid] .formkit-inner {
+  @extend .data-invalid;
+}
+
+[data-type='number'][data-complete] .formkit-inner {
+  input {
+    color: black;
+  }
+
+  @extend .data-complete;
+}
+
+[data-type='number'][data-complete] .formkit-inner::after {
+  @extend .data-complete-after;
+}
+
+// Input styling type 'datepicker'
+[data-type='datepicker'][data-invalid] .formkit-inner {
+  @extend .data-invalid;
+}
+
+[data-type='datepicker'][data-complete] .formkit-inner {
+  .formkit-input {
+    color: white;
+  }
+
+  @extend .data-complete;
+}
+
+[data-type='datepicker'][data-complete] .formkit-inner::after {
+  @extend .data-complete-after;
+}
+
+// Input styling type 'dropdown'
+[data-type='dropdown'][data-invalid] .formkit-inner {
+  @extend .data-invalid;
+}
+
+[data-type='dropdown'][data-complete] .formkit-inner {
+  @extend .data-complete;
+}
+
+[data-type='dropdown'][data-complete] .formkit-inner::after {
+  @extend .data-complete-after;
+}
+
+[data-complete] .formkit-decorator-icon {
+  color: green !important;
+}
+
+[data-type=radio] {
+  .formkit-input:checked ~ .formkit-decorator .formkit-icon {
+    color: green !important;
+    padding: 2px;
+    width: 100%!important;
+    height: 100%!important;;
+  }
+}
+
+[data-type='checkbox'] {
+  display: flex;
+}

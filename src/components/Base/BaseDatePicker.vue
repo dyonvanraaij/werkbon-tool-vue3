@@ -29,11 +29,27 @@ defineProps({
       :label="label"
       :placeholder="placeholder"
       :help="help"
-      overlay
-      popover
+      value-format="YYYY-MM-DD"
+      format="DD-MM-YYYY"
+      clearable
+      :classes="{
+        inner: 'formkit-datepicker-inner',
+      }"
   />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
+.formkit-inner,
+.formkit-input {
+  color: black !important;
+}
 
+.formkit-calendar-icon,
+.formkit-clear-icon,
+.formkit-open-button,
+.formkit-remove-selection,
+.formkit-listbox-button,
+.formkit-open-button {
+  background-color: white !important;
+}
 </style>
